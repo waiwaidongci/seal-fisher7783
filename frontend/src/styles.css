@@ -8,3 +8,18 @@ main { background-image:linear-gradient(to right, transparent 39px, color-mix(in
 .worksheet { border:1px solid var(--ink);border-top:8px solid var(--accent); }
 th { border-top:2px solid var(--ink); }
 @media(max-width:767px){ .hero {grid-template-columns:1fr} }
+
+/* 回卷还原：区间录入行、状态徽章、采用栏 */
+.interval-row { border:1px solid var(--rule); padding:14px 18px; margin:14px 0; display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:12px; align-items:end; background:color-mix(in oklch,var(--paper) 90%,var(--accent)); }
+.interval-row legend { font-family:'IBM Plex Mono',monospace; font-size:12px; padding:0 8px; }
+.interval-row .cell { margin:0; }
+.interval-row .remove-interval { justify-self:start; }
+.status-pill { display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:11px; padding:4px 9px; border:1px solid var(--rule); margin:0 6px; }
+.status-ok { background:color-mix(in oklch,var(--accent) 22%,var(--paper)); }
+.status-no_solution,.status-ambiguous,.status-timeout,.status-invalid { color:oklch(45% .16 25); border-color:oklch(60% .14 25); }
+.restoration { max-width:none; }
+.restoration summary { font-size:15px; }
+.adopt-bar button { background:var(--accent); border-color:var(--accent); }
+.adopt-bar form { margin:0; }
+code { font-family:'IBM Plex Mono',monospace; font-size:12px; background:color-mix(in oklch,var(--ink) 7%,var(--paper)); padding:2px 6px; margin-right:6px; }
